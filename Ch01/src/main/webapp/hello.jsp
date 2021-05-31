@@ -6,6 +6,6 @@
 <title>hello</title>
 </head>
 <body>
-	<h1>hello JSP!!!</h1>
+	<h1>hello JSP!!!</h1> 
 </body>
 </html>
