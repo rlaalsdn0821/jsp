@@ -7,7 +7,7 @@
 <%@page import="java.sql.Connection"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	//DB 정보
+//DB 정보
 	String host = "jdbc:mysql://54.180.160.240:3306/minwookim0821";
 	String user = "minwookim0821";
 	String pass = "1234";
@@ -29,16 +29,16 @@
 		
 		// 5단계 - SQL 결과셋 처리
 		while(rs.next()){
-			MemberBean mb = new MemberBean();
-			
-			mb.setUid(rs.getString(1));
-			mb.setName(rs.getString(2));
-			mb.setHp(rs.getString(3));
-			mb.setPos(rs.getString(4));
-			mb.setDep(rs.getInt(5));
-			mb.setRdate(rs.getString(6));
-			
-			members.add(mb);
+	MemberBean mb = new MemberBean();
+	
+	mb.setUid(rs.getString(1));
+	mb.setName(rs.getString(2));
+	mb.setHp(rs.getString(3));
+	mb.setPos(rs.getString(4));
+	mb.setDep(rs.getInt(5));
+	mb.setRdate(rs.getString(6));
+	
+	members.add(mb);
 		}
 		
 		// 6단계 - 데이터베이스 종료
@@ -71,7 +71,9 @@
 			<th>기타</th>
 		</tr>
 		
-		<% for(MemberBean mb : members){ %>
+		<%
+				for(MemberBean mb : members){
+				%>
 		<tr>
 			<td><%= mb.getUid() %></td>
 			<td><%= mb.getName() %></td>

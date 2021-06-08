@@ -5,7 +5,7 @@
 <%@page import="java.sql.DriverManager"%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	// 파라미터 수신
+// 파라미터 수신
 	request.setCharacterEncoding("utf-8");
 	String uid = request.getParameter("uid");
 	//DB 정보
@@ -31,12 +31,12 @@
 		
 		// 5단계
 		if(rs.next()){
-			mb.setUid(rs.getString(1));
-			mb.setName(rs.getString(2));
-			mb.setHp(rs.getString(3));
-			mb.setPos(rs.getString(4));
-			mb.setDep(rs.getInt(5));
-			mb.setRdate(rs.getString(6));
+	mb.setUid(rs.getString(1));
+	mb.setName(rs.getString(2));
+	mb.setHp(rs.getString(3));
+	mb.setPos(rs.getString(4));
+	mb.setDep(rs.getInt(5));
+	mb.setRdate(rs.getString(6));
 		}
 		
 		// 6단계
