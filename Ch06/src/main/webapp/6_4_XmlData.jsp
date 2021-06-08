@@ -13,7 +13,7 @@
 <%@ page contentType="text/xml;charset=UTF-8" pageEncoding="UTF-8" trimDirectiveWhitespaces="true"%>
 
 <%
-	//DB 정보
+//DB 정보
 	String host = "jdbc:mysql://54.180.160.240:3306/minwookim0821";
 	String user = "minwookim0821";
 	String pass = "1234";
@@ -36,16 +36,16 @@
 		
 		// 5단계
 		while(rs.next()){
-			
-			MemberBean mb = new MemberBean();
-			mb.setUid(rs.getString(1));
-			mb.setName(rs.getString(2));
-			mb.setHp(rs.getString(3));
-			mb.setPos(rs.getString(4));
-			mb.setDep(rs.getInt(5));
-			mb.setRdate(rs.getString(6));
+	
+	MemberBean mb = new MemberBean();
+	mb.setUid(rs.getString(1));
+	mb.setName(rs.getString(2));
+	mb.setHp(rs.getString(3));
+	mb.setPos(rs.getString(4));
+	mb.setDep(rs.getInt(5));
+	mb.setRdate(rs.getString(6));
 		
-			list.add(mb);
+	list.add(mb);
 		}
 		
 		// 6단계
@@ -94,5 +94,4 @@
 	String xml = outputter.outputString(doc);
 	
 	out.print(xml);
-
 %>
